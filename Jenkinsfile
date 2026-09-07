@@ -1,5 +1,7 @@
 pipeline {
-    agent 'test-1'
+    agent {
+        label 'test-1'
+    }
 
     triggers {
         pollSCM('H/5 * * * *')
