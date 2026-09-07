@@ -14,8 +14,6 @@ pipeline {
 
         stage('Check Python') {
             steps {
-                bat 'python3 --version'
-                bat 'py --version'
                 bat 'python --version'
             }
         }
