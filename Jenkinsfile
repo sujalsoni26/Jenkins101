@@ -12,6 +12,12 @@ pipeline {
             }
         }
 
+        stage('Check Python') {
+            steps {
+                bat 'python --version'
+            }
+        }
+
         stage('Run Code') {
             steps {
                 echo 'Running hello.py ....'
