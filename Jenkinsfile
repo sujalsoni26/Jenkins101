@@ -15,7 +15,7 @@ pipeline {
         stage('Run Code') {
             steps {
                 echo 'Running hello.py ....'
-                sh 'python3 hello.py'
+                bat 'python hello.py'
             }
         }
 
