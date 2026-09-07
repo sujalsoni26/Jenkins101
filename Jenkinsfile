@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'test-1'
+        label 'aws-ec2'
     }
 
     triggers {
@@ -16,14 +16,14 @@ pipeline {
 
         stage('Check Python') {
             steps {
-                bat 'python --version'
+                sh 'python3 --version'
             }
         }
 
         stage('Run Code') {
             steps {
                 echo 'Running hello.py ....'
-                bat 'python hello.py'
+                sh 'python3 hello.py'
             }
         }
 
