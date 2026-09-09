@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'test-ec2'
+        label 'aws'
     }
 
     stages {
