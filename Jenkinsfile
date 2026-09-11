@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'aws-ec2'
-    }
+    agent any
 
     triggers {
         pollSCM('H/5 * * * *')
@@ -16,14 +14,14 @@ pipeline {
 
         stage('Check Python') {
             steps {
-                sh 'python3 --version'
+                bat 'python --version'
             }
         }
 
         stage('Run Code') {
             steps {
                 echo 'Running hello.py ....'
-                sh 'python3 hello.py'
+                bat 'python hello.py'
             }
         }
 
